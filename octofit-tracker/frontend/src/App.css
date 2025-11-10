@@ -1,0 +1,380 @@
+/* OctoFit Tracker - Custom Styles */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  font-family: var(--font-family);
+  min-height: 100vh;
+  background-color: var(--light-color);
+}
+
+/* Navigation Styles */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.375rem;
+}
+
+/* Page Headers */
+.page-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  color: white;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Card Styles */
+.custom-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.custom-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  color: white;
+  border-radius: 1rem 1rem 0 0 !important;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background-color: var(--light-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0 0 1rem 1rem !important;
+}
+
+/* Table Styles */
+.custom-table {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.table-header {
+  background: linear-gradient(135deg, var(--dark-color), var(--secondary-color));
+}
+
+.table-row:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Button Styles */
+.btn-custom-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-custom-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.75rem rgba(13, 110, 253, 0.25);
+  color: white;
+}
+
+.btn-custom-secondary {
+  background: linear-gradient(135deg, var(--secondary-color), var(--dark-color));
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.btn-custom-secondary:hover {
+  color: white;
+}
+
+.btn-custom-success {
+  background: linear-gradient(135deg, var(--success-color), #20c997);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.btn-custom-success:hover {
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.75rem rgba(25, 135, 84, 0.25);
+}
+
+/* Badge Styles */
+.badge-custom {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+}
+
+.badge-rank {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Avatar Styles */
+.avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+}
+
+.avatar-sm {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+/* Loading Spinner */
+.loading-container {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-border-lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Alert Styles */
+.alert-custom {
+  border-radius: 1rem;
+  border: none;
+  padding: 1.5rem;
+}
+
+/* Home Jumbotron */
+.jumbotron-custom {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.jumbotron-custom h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.jumbotron-custom .lead {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.modal-header {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-radius: 0 0 1rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: var(--light-color);
+}
+
+/* Progress Bars */
+.progress {
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--success-color), #20c997);
+}
+
+/* Enhanced Badges */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color)) !important;
+  color: white;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color)) !important;
+}
+
+/* Form Controls */
+.form-control {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .jumbotron-custom h1 {
+    font-size: 2rem;
+  }
+  
+  .jumbotron-custom .lead {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    border-radius: 0.375rem !important;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.shadow-custom {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--primary-color), var(--info-color)) border-box;
+}
+
+/* Hover Effects */
+.btn:hover,
+.card:hover,
+.badge:hover {
+  transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-color), var(--info-color));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
