@@ -17,7 +17,39 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet, api_root
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
+from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet
+import os
+
+@api_view(['GET'])
+def codespace_api_root(request, format=None):
+    """
+    API root with codespace-aware URL generation
+    """
+    # Check if we're in a codespace
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    
+    if codespace_name:
+        # Use codespace URL format
+        base_url = f"https://{codespace_name}-8000.app.github.dev"
+        return Response({
+            'users': f"{base_url}/api/users/",
+            'teams': f"{base_url}/api/teams/",
+            'activities': f"{base_url}/api/activities/",
+            'leaderboard': f"{base_url}/api/leaderboard/",
+            'workouts': f"{base_url}/api/workouts/",
+        })
+    else:
+        # Use Django's reverse for localhost/development
+        return Response({
+            'users': reverse('user-list', request=request, format=format),
+            'teams': reverse('team-list', request=request, format=format),
+            'activities': reverse('activity-list', request=request, format=format),
+            'leaderboard': reverse('leaderboard-list', request=request, format=format),
+            'workouts': reverse('workout-list', request=request, format=format),
+        })
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -28,6 +60,6 @@ router.register(r'workouts', WorkoutViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', api_root, name='api-root'),
+    path('', codespace_api_root, name='api-root'),
     path('api/', include(router.urls)),
 ]
